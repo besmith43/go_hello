@@ -1,3 +1,3 @@
-module github.com/besmith/go_hello
+module github.com/besmith43/go_hello
 
 go 1.24.1
