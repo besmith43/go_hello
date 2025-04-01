@@ -1,6 +1,10 @@
 package main
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
 
 func TestAdd(t *testing.T) {
 	testcases := []struct {
@@ -16,8 +20,12 @@ func TestAdd(t *testing.T) {
 	for _, tt := range testcases {
 		result := add(tt.x, tt.y)
 
-		if result != tt.expectedResult {
-			t.Errorf("expected=%d, got=%d", tt.expectedResult, result)
-		}
+		/*
+			if result != tt.expectedResult {
+				t.Errorf("expected=%d, got=%d", tt.expectedResult, result)
+			}
+		*/
+
+		assert.Equal(t, tt.expectedResult, result, "they should be equal")
 	}
 }
